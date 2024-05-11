@@ -21,10 +21,10 @@ app.get("/", function (req, res) {
 
 // your first API endpoint...
 app.get("/api/whoami", function (req, res) {
-  const ip = req.ip;
+  const ipaddress = req.ip;
   const language = req.headers["accept-language"];
   const software = req.headers["user-agent"];
-  const data = { ip, language, software };
+  const data = { ipaddress, language, software };
   res.json(data);
 });
 
